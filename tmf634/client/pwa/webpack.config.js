@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = [
 	{
 		entry: [
+			'./src/app.scss',
+			'./src/app.js'
 		],
 		output: {
 			filename: 'bundle.js',
