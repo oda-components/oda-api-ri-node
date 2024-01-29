@@ -208,7 +208,6 @@ class LitApp extends LitElement {
 				<app-main
 						id="main-content"
 						class="main-content">
-					${this.#router.outlet()}
 				</app-main>
 			</div>
 		`;
