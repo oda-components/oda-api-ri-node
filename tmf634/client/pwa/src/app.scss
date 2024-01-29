@@ -16,8 +16,6 @@
 @include drawer.dismissible-core-styles;
 @include drawer.modal-core-styles;
 @include list.deprecated-core-styles;
-@include card.core-styles;
-@include dialog.core-styles;
 
 .mdc-top-app-bar {
 	@include top-app-bar.ink-color(#ffffff);
@@ -49,3 +47,16 @@ body {
 	z-index: 7;
 }
 
+.mdc-list-item {
+	display: flex;
+	position: relative;
+	height: 41px;
+}
+
+.mdc-list-item__text {
+	padding-left: 10px;
+}
+
+.mdc-button {
+	float: right;
+}
