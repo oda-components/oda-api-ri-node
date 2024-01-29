@@ -1,0 +1,51 @@
+@use "@material/theme" with (
+	$primary: #f57f17,
+	$secondary: #aeea00,
+	$surface: #ffffff,
+	$background: #eeeeee
+);
+@use "@material/typography/mdc-typography";
+@use "@material/top-app-bar";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/icon-button/mdc-icon-button";
+@use "@material/icon-button/styles";
+@use "@material/drawer";
+@use "@material/list";
+
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.deprecated-core-styles;
+@include card.core-styles;
+@include dialog.core-styles;
+
+.mdc-top-app-bar {
+	@include top-app-bar.ink-color(#ffffff);
+	@include top-app-bar.icon-ink-color(#ffffff);
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: var(--mdc-theme-background, #eeeeee);
+}
+
+.mdc-drawer-app-content {
+	flex: auto;
+	overflow: auto;
+	position: relative;
+}
+
+.main-content {
+	overflow: auto;
+	height: 100%;
+}
+
+.app-bar {
+	position: absolute;
+}
+
+.mdc-top-app-bar {
+	z-index: 7;
+}
+
