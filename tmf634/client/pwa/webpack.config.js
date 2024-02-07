@@ -4,7 +4,8 @@ module.exports = [
 	{
 		entry: [
 			'./src/app.scss',
-			'./src/app.js'
+			'./src/app.js',
+			'./src/app-dashboard'
 		],
 		output: {
 			filename: 'bundle.js',
