@@ -1,4 +1,5 @@
 import {LitElement, html} from 'lit';
+import {Router} from '@lit-labs/router';
 import {MDCTopAppBar} from '@material/top-app-bar/index';
 import {MDCDrawer} from "@material/drawer/index";
 import {MDCRipple} from '@material/ripple/index';
@@ -12,6 +13,56 @@ class LitApp extends LitElement {
 
 	static properties = {};
 
+	#router = new Router(this, [
+		{
+				path: '/',
+				enter: async (params) => {
+				await import('./app-dashboard.js');
+				drawer.open = false;
+			},
+				render: () => html`
+				<app-dashboard
+					id="app-dashboard">
+				</app-dashboard>
+			`
+		},
+		{
+				path: '/specification',
+				enter: async (params) => {
+				await import('./app-specification.js');
+				drawer.open = false;
+			},
+				render: () => html`
+				<app-specification
+					id="app-specification">
+				</app-specification>
+			`
+		},
+		{
+				path: '/catalog',
+				enter: async (params) => {
+				await import('./app-catalog.js');
+				drawer.open = false;
+			},
+				render: () => html`
+				<app-catalog
+					id="app-catalog">
+				</app-catalog>
+			`
+		},
+		{
+				path: '/candidate',
+				enter: async (params) => {
+				await import('./app-candidate.js');
+				drawer.open = false;
+			},
+				render: () => html`
+				<app-candidate
+					id="app-candidate">
+				</app-candidate>
+			`
+		},
+	]);
 	constructor() {
 		super();
 	}
@@ -208,6 +259,7 @@ class LitApp extends LitElement {
 				<app-main
 						id="main-content"
 						class="main-content">
+					${this.#router.outlet()}
 				</app-main>
 			</div>
 		`;
