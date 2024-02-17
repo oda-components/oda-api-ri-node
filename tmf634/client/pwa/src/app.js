@@ -265,6 +265,23 @@ class LitApp extends LitElement {
 		`;
 	}
 
+	_refresh() {
+		switch(this.shadowRoot.getElementById('main-content').children[0].id) {
+			case 'app-dashboard':
+				this.shadowRoot.getElementById('app-dashboard').reload();
+				break;
+			case 'app-catalog':
+				this.shadowRoot.getElementById('app-catalog').reload();
+				break;
+			case 'app-candidate':
+				this.shadowRoot.getElementById('app-candidate').reload();
+				break;
+			case 'app-specification':
+				this.shadowRoot.getElementById('app-specification').reload();
+				break;
+		}
+	}
+
 	firstUpdated() {
 		const topAppBarElement = this.shadowRoot.getElementById('app-bar');
 		MDCRipple.attachTo(topAppBarElement);
