@@ -5,10 +5,11 @@ module.exports = [
 		entry: [
 			'./src/app.scss',
 			'./src/app.js',
-			'./src/app-dashboard',
-			'./src/app-specification',
-			'./src/app-catalog',
-			'./src/app-candidate'
+			'./src/app-dashboard.js',
+			'./src/app-specification.js',
+			'./src/app-catalog.js',
+			'./src/app-candidate.js',
+			'./src/app-help.js'
 		],
 		output: {
 			filename: 'bundle.js',

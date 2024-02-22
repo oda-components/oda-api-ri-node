@@ -6,6 +6,8 @@ import {MDCRipple} from '@material/ripple/index';
 import {MDCList} from '@material/list';
 import {MDCDialog} from '@material/dialog';
 
+import './app-help';
+
 import packageJson from '../package.json'
 const {name, description, version, license} = packageJson;
 
@@ -443,6 +445,8 @@ class LitApp extends LitElement {
 					${this.#router.outlet()}
 				</app-main>
 			</div>
+			<!--Modal Definitions-->
+			<app-help id="appHelp"></app-help>
 		`;
 	}
 
