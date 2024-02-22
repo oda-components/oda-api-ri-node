@@ -3,6 +3,8 @@ import {Router} from '@lit-labs/router';
 import {MDCTopAppBar} from '@material/top-app-bar/index';
 import {MDCDrawer} from "@material/drawer/index";
 import {MDCRipple} from '@material/ripple/index';
+import {MDCList} from '@material/list';
+import {MDCDialog} from '@material/dialog';
 
 import packageJson from '../package.json'
 const {name, description, version, license} = packageJson;
@@ -63,6 +65,7 @@ class LitApp extends LitElement {
 			`
 		},
 	]);
+
 	constructor() {
 		super();
 	}
@@ -254,6 +257,184 @@ class LitApp extends LitElement {
 					</nav>
 				</div>
 			</aside>
+			<aside class="mdc-dialog" id="overflowDialog">
+				<div class="mdc-dialog__surface"
+					id="overflowSurface"
+					role="dialog"
+					aria-modal="true"
+					aria-describedby="my-dialog-content"
+					tabindex="-1">
+					<div class="mdc-dialog__container">
+						<div class="mdc-dialog__content" id="my-dialog-content">
+							<ul class="mdc-list mdc-list--avatar-list">
+								 <li class="mdc-list-item mdc-dialog--open" @click="${this._handleContactUs}">
+									<span class="mdc-list-item__ripple"></span>
+									<svg
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000">
+										<path
+												d="M0 0h24v24H0V0z"
+												fill="none"/>
+										<path
+												d="M0,0h24v24H0V0z" fill="none"/><path d="M12,7V3H2v18h20V7H12z M6,19H4v-2h2V19z M6,15H4v-2h2V15z M6,11H4V9h2V11z M6,7H4V5h2V7z M10,19H8v-2h2V19z M10,15H8v-2h2 V15z M10,11H8V9h2V11z M10,7H8V5h2V7z M20,19h-8v-2h2v-2h-2v-2h2v-2h-2V9h8V19z M18,11h-2v2h2V11z M18,15h-2v2h2V15z"/>
+									</svg>
+<span class="mdc-list-item__text">Contact Us </span>
+									<svg
+											id="arowUp"
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000"
+											display="block">
+										<path
+												d="M0 0h24v24H0V0z"
+												fill="none"/>
+										<path
+													d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+									</svg>
+									<svg
+											id="arowDown"
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000"
+											display="none">
+										<path
+												d="M0 0h24v24H0V0z"
+												fill="none"/>
+										<path
+												d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+									</svg>
+								</li>
+								<li class="collapse" id="call">
+									<span class="mdc-list-item__ripple"></span>
+									<span class="mdc-list-item__tel">
+										<a href="tel:+639208370397">+639208370397</a>
+									</span>
+								</li>
+								<li class="mdc-list-item">
+									<svg
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000">
+										<path
+												d="M0 0h24v24H0z"
+												fill="none"/>
+										<path
+												d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+									</svg>
+									<span class="mdc-list-item__text">
+										<a target="_blank"
+											href="https://sigscale.atlassian.net/secure/CreateIssue!default.jspa?pid=10100&issuetype=10000">
+												Send Feedback
+										</a>
+									</span>
+								</li>
+								<li class="mdc-list-item" tabindex="0">
+									<svg
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000">
+										<path
+												d="M0 0h24v24H0z"
+												fill="none"/>
+										<path
+												d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+									</svg>
+									<span class="mdc-list-item__text">
+										<a target="_blank" href="/doc/index.html">
+											API Docs
+										</a>
+									</span>
+								</li>
+								<li class="mdc-list-item" @click="${this._handleHelp}">
+									<svg
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000">
+										<path
+												d="M0 0h24v24H0z"
+												fill="none"/>
+										<path
+												d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+									</svg>
+									<span class="mdc-list-item__text">Help</span>
+								</li>
+								<li class="mdc-list-item" tabindex="0" @click="${this._about}">
+									<svg
+											class="material-icons mdc-button__icon mdc-list-item__graphic"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											height="24px"
+											viewBox="0 0 24 24"
+											width="24px"
+											fill="#000000">
+										<path
+												d="M0 0h24v24H0z"
+												fill="none"/>
+										<path
+												d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+									</svg>
+									<span class="mdc-list-item__text">About</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="mdc-dialog__scrim"></div>
+			</aside>
+			<aside class="mdc-dialog" id="helpabout"
+				role="alertdialog" aria-modal="true" aria-labelledby="helpAboutLabel">
+				<div class="mdc-dialog__container">
+					<div class="mdc-dialog__surface">
+						<h2 class="mdc-dialog__title" id="helpAboutLabel">About</h2>
+							<div class="mdc-dialog__content">
+								<p>${description}<br>
+								${name} ${version}<br>
+								Copyright 2023 - 2024 SigScale Global Inc.<br>
+								${license}<br></p>
+								<a target="_blank" href="http://www.sigscale.org">www.sigscale.org</a></p>
+								<button
+									class="mdc-icon-button material-icons">
+									<svg
+											@click="${this._closeAbout}">
+											xmlns="http://www.w3.org/2000/svg"
+											height="24"
+											viewBox="0 -960 960 960"
+											width="24"
+											aria-hidden="true">
+										<path
+											d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+									</svg>
+								</button>
+							</div>
+					</div>
+				</div>
+				<div class="mdc-dialog__scrim"></div>
+			</aside>
 			<div
 					class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
 				<app-main
@@ -279,6 +460,56 @@ class LitApp extends LitElement {
 			case 'app-specification':
 				this.shadowRoot.getElementById('app-specification').reload();
 				break;
+		}
+	}
+
+	_overFlowMenu() {
+		const dialogElement = this.shadowRoot.getElementById('overflowDialog');
+		const dialog = MDCDialog.attachTo(dialogElement);
+		dialog.open();
+	}
+
+	_about() {
+		var helpAbout = this.shadowRoot.getElementById('helpabout');
+		var helpAboDialog = MDCDialog.attachTo(helpAbout);
+		helpAbout.classList.remove("visually-hidden");
+		helpAboDialog.open();
+	}
+
+	_closeAbout() {
+		var closeAbout = this.shadowRoot.getElementById('helpabout');
+		var closeAboDialog = MDCDialog.attachTo(closeAbout);
+		closeAbout.classList.add("visually-hidden");
+	}
+
+	_handleHelp(event) {
+		var helpMenuObj = document.querySelector('lit-app').shadowRoot.getElementById('appHelp').shadowRoot.getElementById('helpMenu');;
+		var helpDialog = MDCDialog.attachTo(helpMenuObj);
+		var dialogElement = this.shadowRoot.getElementById('overflowDialog');
+		var dialog = MDCDialog.attachTo(dialogElement);
+		if(helpDialog.open()) {
+			dialog.close();
+		} else {
+			helpDialog.open();
+			helpMenuObj.classList.remove("visually-hidden");
+		}
+	}
+
+	_handleContactUs(event) {
+		var arrowUp = this.shadowRoot.getElementById('arowUp');
+		var arrowDown = this.shadowRoot.getElementById('arowDown');
+		if (arrowUp.style.display !== 'none') {
+			arrowUp.style.display = 'none';
+			arrowDown.style.display = 'block'; // Display the second icon
+		} else {
+			arrowUp.style.display = 'block'; // Display the first icon
+			arrowDown.style.display = 'none';
+		}
+		var element = this.shadowRoot.getElementById('call');
+		if(element.style.display == "flex") {
+			element.style.display = "none";
+		} else {
+			element.style.display = "flex";
 		}
 	}
 

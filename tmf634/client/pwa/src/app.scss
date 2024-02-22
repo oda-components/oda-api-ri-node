@@ -11,6 +11,8 @@
 @use "@material/icon-button/styles";
 @use "@material/drawer";
 @use "@material/list";
+@use "@material/dialog";
+@use "@material/ripple";
 @use "@material/data-table/data-table-theme" with (
    $header-row-fill-color: #ffb04c
 );
@@ -22,6 +24,7 @@
 @include list.deprecated-core-styles;
 @include data-table.core-styles;
 @include data-table.theme-baseline;
+@include dialog.core-styles;
 
 .mdc-top-app-bar {
 	@include top-app-bar.ink-color(#ffffff);
@@ -70,4 +73,54 @@ body {
 .mdc-data-table {
    height: 100vh;
    width: 100vw;
+}
+
+.collapse {
+   display:none;
+}
+
+.mdc-dialog {
+   position: fixed;
+   top: -29.5%;
+   padding: 0px;
+   justify-content: flex-end;
+}
+
+.mdc-list-item {
+   display: flex;
+   position: relative;
+   height: 41px;
+}
+
+.mdc-dialog__container {
+   pointer-events: auto;
+}
+
+.mdc-list-item__tel {
+   display: inline-block;
+   margin-left: 60px;
+   text-align: right;
+}
+
+.mdc-list-item__text {
+   padding-left: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.mdc-button {
+   float: right;
+}
+
+.mdc-icon-button {
+   float: right;
 }
