@@ -322,7 +322,7 @@ class LitApp extends LitElement {
 								<li class="collapse" id="call">
 									<span class="mdc-list-item__ripple"></span>
 									<span class="mdc-list-item__tel">
-										<a href="tel:+639208370397">+639208370397</a>
+										<a href="Email">info@odacomponents.lk</a>
 									</span>
 								</li>
 								<li class="mdc-list-item">
