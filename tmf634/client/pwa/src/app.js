@@ -287,7 +287,7 @@ class LitApp extends LitElement {
 									</svg>
 <span class="mdc-list-item__text">Contact Us </span>
 									<svg
-											id="arowUp"
+											id="arowDown"
 											class="material-icons mdc-button__icon mdc-list-item__graphic"
 											aria-hidden="true"
 											xmlns="http://www.w3.org/2000/svg"
@@ -300,10 +300,10 @@ class LitApp extends LitElement {
 												d="M0 0h24v24H0V0z"
 												fill="none"/>
 										<path
-													d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+												d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
 									</svg>
 									<svg
-											id="arowDown"
+											id="arowUp"
 											class="material-icons mdc-button__icon mdc-list-item__graphic"
 											aria-hidden="true"
 											xmlns="http://www.w3.org/2000/svg"
@@ -316,7 +316,7 @@ class LitApp extends LitElement {
 												d="M0 0h24v24H0V0z"
 												fill="none"/>
 										<path
-												d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+													d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
 									</svg>
 								</li>
 								<li class="collapse" id="call">
@@ -502,12 +502,12 @@ class LitApp extends LitElement {
 	_handleContactUs(event) {
 		var arrowUp = this.shadowRoot.getElementById('arowUp');
 		var arrowDown = this.shadowRoot.getElementById('arowDown');
-		if (arrowUp.style.display !== 'none') {
-			arrowUp.style.display = 'none';
-			arrowDown.style.display = 'block'; // Display the second icon
-		} else {
-			arrowUp.style.display = 'block'; // Display the first icon
+		if (arrowDown.style.display !== 'none') {
 			arrowDown.style.display = 'none';
+			arrowUp.style.display = 'block'; // Display the second icon
+		} else {
+			arrowDown.style.display = 'block'; // Display the first icon
+			arrowUp.style.display = 'none';
 		}
 		var element = this.shadowRoot.getElementById('call');
 		if(element.style.display == "flex") {
