@@ -11,10 +11,11 @@
 @use "@material/icon-button/styles";
 @use "@material/drawer";
 @use "@material/list";
+@use "@material/card";
 @use "@material/dialog";
 @use "@material/ripple";
 @use "@material/data-table/data-table-theme" with (
-   $header-row-fill-color: #ffb04c
+	$header-row-fill-color: #ffb04c
 );
 @use "@material/data-table/data-table";
 
@@ -22,6 +23,7 @@
 @include drawer.dismissible-core-styles;
 @include drawer.modal-core-styles;
 @include list.deprecated-core-styles;
+@include card.core-styles;
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 @include dialog.core-styles;
@@ -56,6 +58,24 @@ body {
 	z-index: 7;
 }
 
+.app-card-content {
+	padding: 16px;
+}
+
+.app-counter-card {
+	width: 452px;
+	height: 400;
+}
+
+.app-card-content h6 {
+	margin-block: unset;
+}
+
+.app-uptime-card {
+	width: 488px;
+	height: 400;
+}
+
 .mdc-list-item {
 	display: flex;
 	position: relative;
@@ -71,56 +91,56 @@ body {
 }
 
 .mdc-data-table {
-   height: 100vh;
-   width: 100vw;
+	height: 100vh;
+	width: 100vw;
 }
 
 .collapse {
-   display:none;
+	display:none;
 }
 
 .mdc-dialog {
-   position: fixed;
-   top: -29.5%;
-   padding: 0px;
-   justify-content: flex-end;
+	position: fixed;
+	top: -29.5%;
+	padding: 0px;
+	justify-content: flex-end;
 }
 
 .mdc-list-item {
-   display: flex;
-   position: relative;
-   height: 41px;
+	display: flex;
+	position: relative;
+	height: 41px;
 }
 
 .mdc-dialog__container {
-   pointer-events: auto;
+	pointer-events: auto;
 }
 
 .mdc-list-item__tel {
-   display: inline-block;
-   margin-left: 60px;
-   text-align: right;
+	display: inline-block;
+	margin-left: 60px;
+	text-align: right;
 }
 
 .mdc-list-item__text {
-   padding-left: 10px;
+	padding-left: 10px;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 .mdc-button {
-   float: right;
+	float: right;
 }
 
 .mdc-icon-button {
-   float: right;
+	float: right;
 }
