@@ -33,7 +33,7 @@ class Dashboard extends LitElement {
 									y="22"
 									style="fill:white"
 									text-anchor="end">
-							 	200 
+								107153947 
 							</text>
 							<rect
 									width="250"
@@ -47,7 +47,7 @@ class Dashboard extends LitElement {
 									y="22"
 									style="fill:white"
 									text-anchor="middle">
-								Ok   
+								200 Ok   
 							</text>
 						</g>
 						<g>
@@ -63,7 +63,7 @@ class Dashboard extends LitElement {
 									y="54"
 									style="fill:white"
 									text-anchor="end">
-							 	201 
+								603145 
 							</text>
 							<rect
 									width="250"
@@ -77,7 +77,7 @@ class Dashboard extends LitElement {
 									y="54"
 									style="fill:white"
 									text-anchor="middle">
-								Created   
+								201 Created   
 							</text>
 						</g>
 						<g>
@@ -93,7 +93,7 @@ class Dashboard extends LitElement {
 									y="86"
 									style="fill:white"
 									text-anchor="end">
-								204 
+								3820 
 							</text>
 							<rect
 									width="250"
@@ -107,7 +107,7 @@ class Dashboard extends LitElement {
 									y="86"
 									style="fill:white"
 									text-anchor="middle">
-								No Content  
+								204 No Content  
 							</text>
 						</g>
 						<g>
@@ -123,7 +123,7 @@ class Dashboard extends LitElement {
 									y="118"
 									style="fill:white"
 									text-anchor="end">
-							  	400 
+								2054 
 							</text>
 							<rect
 									width="250"
@@ -137,7 +137,7 @@ class Dashboard extends LitElement {
 									y="118"
 									style="fill:white"
 									text-anchor="middle">
-								Bad Request
+								400 Bad Request
 							</text>
 						</g>
 						<g>
@@ -153,7 +153,7 @@ class Dashboard extends LitElement {
 									y="150"
 									style="fill:white"
 									text-anchor="end">
-							  	404 
+								127
 							</text>
 							<rect
 									width="250"
@@ -167,7 +167,7 @@ class Dashboard extends LitElement {
 									y="150"
 									style="fill:white"
 									text-anchor="middle">
-								Not Found
+								404 Not Found
 							</text>
 						</g>
 						<g>
@@ -183,7 +183,7 @@ class Dashboard extends LitElement {
 									y="182"
 									style="fill:white"
 									text-anchor="end">
-							  	405 
+								825 
 							</text>
 							<rect
 									width="250"
@@ -197,7 +197,7 @@ class Dashboard extends LitElement {
 									y="182"
 									style="fill:white"
 									text-anchor="middle">
-								Method Not Allowed
+								405 Method Not Allowed
 							</text>
 						</g>
 						<g>
@@ -213,7 +213,7 @@ class Dashboard extends LitElement {
 									y="214"
 									style="fill:white"
 									text-anchor="end">
-								500
+								42
 							</text>
 							<rect
 									width="250"
@@ -227,7 +227,7 @@ class Dashboard extends LitElement {
 									y="214"
 									style="fill:white"
 									text-anchor="middle">
-								Internal Server Error
+								500 Internal Server Error
 							</text>
 						</g>
 					</svg>
