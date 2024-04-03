@@ -19,7 +19,7 @@ class Dashboard extends LitElement {
 					</h6>
 					<svg
 							class="mdc-card__media"
-							viewBox="0,0,420,200">
+							viewBox="0,0,420,250">
 						<g>
 							<rect
 									width="150"
